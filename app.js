@@ -2,7 +2,7 @@
 const RAW_JSON = {
     "ALERT_NOTIFICATIONS": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "ALERT_NOTIFICATIONS", "row_count": 2450000, "column_count": 18, "bytes": 384000000, "id": 999 },
-        "scores": { "overall": 41.0, "d1": 25.0, "d2": 28.0, "d3": 76.7, "d4": 100.0, "d5": 0.0, "d6": 79.0, "last_computed": "2026-05-27 08:30:00" },
+        "scores": { "overall": 41.0, "d1": 25.0, "d2": 28.0, "d3": 76.7, "d4": 100.0, "d5": 0.0, "d6": 75.0, "last_computed": "2026-05-27 08:30:00" },
         "d1": {
             "data_age_index": { "score": 0.0, "label": "Data Age Index", "details": { "age": 0, "threshold": 14400 } },
             "pipeline_health_monitor": { "score": 100.0, "label": "Pipeline Health", "details": { "failed_runs": 0, "total_runs": 0 } }
@@ -18,7 +18,7 @@ const RAW_JSON = {
             "daily_volume_health": { "score": 65.8, "label": "Daily Volume Health", "details": { "today_inserted_count": 62000, "avg": 48500, "z": 1.8, "status": "OUTLIER" } },
             "monthly_volume_stability": { "score": 84.0, "label": "Monthly Volume Stability", "details": { "outliers": 6 } }
         },
-        "d6": { "revenue_sensitivity": { "score": 88.0 }, "regulatory_severity": { "score": 88.0 }, "operational_criticality": { "score": 88.0 }, "customer_impact": { "score": 88.0 } }
+        "d6": { "revenue_sensitivity": { "score": 75.0 }, "regulatory_severity": { "score": 75.0 }, "operational_criticality": { "score": 75.0 }, "customer_impact": { "score": 75.0 } }
     },
     "SENSOR_READINGS": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "SENSOR_READINGS", "row_count": 15000000, "column_count": 24, "bytes": 1024000000, "id": 1000 },
@@ -42,7 +42,7 @@ const RAW_JSON = {
     },
     "DAILY_AGGREGATES": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "DAILY_AGGREGATES", "row_count": 55000, "column_count": 12, "bytes": 25000000, "id": 1001 },
-        "scores": { "overall": 92.1, "d1": 99.0, "d2": 95.0, "d3": 91.0, "d4": 95.0, "d5": 88.0, "d6": 82.0, "last_computed": "2026-05-27 08:20:00" },
+        "scores": { "overall": 92.1, "d1": 99.0, "d2": 95.0, "d3": 91.0, "d4": 95.0, "d5": 88.0, "d6": 75.0, "last_computed": "2026-05-27 08:20:00" },
         "d1": {
             "data_age_index": { "score": 99.0, "label": "Data Age Index", "details": { "age": 10, "threshold": 720 } },
             "pipeline_health_monitor": { "score": 99.0, "label": "Pipeline Health", "details": { "failed_runs": 0, "total_runs": 30 } }
@@ -58,11 +58,11 @@ const RAW_JSON = {
             "daily_volume_health": { "score": 88.0, "label": "Daily Volume Health", "details": { "today_inserted_count": 181, "avg": 180, "z": 0.2, "status": "NORMAL" } },
             "monthly_volume_stability": { "score": 88.0, "label": "Monthly Volume Stability", "details": { "outliers": 0 } }
         },
-        "d6": { "revenue_sensitivity": { "score": 82.0 }, "regulatory_severity": { "score": 82.0 }, "operational_criticality": { "score": 82.0 }, "customer_impact": { "score": 82.0 } }
+        "d6": { "revenue_sensitivity": { "score": 75.0 }, "regulatory_severity": { "score": 75.0 }, "operational_criticality": { "score": 75.0 }, "customer_impact": { "score": 75.0 } }
     },
     "BATTERY_STATUS": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "BATTERY_STATUS", "row_count": 8500000, "column_count": 30, "bytes": 750000000, "id": 1002 },
-        "scores": { "overall": 65.4, "d1": 72.0, "d2": 78.0, "d3": 60.0, "d4": 52.0, "d5": 68.0, "d6": 91.0, "last_computed": "2026-05-27 08:25:00" },
+        "scores": { "overall": 65.4, "d1": 72.0, "d2": 78.0, "d3": 60.0, "d4": 52.0, "d5": 68.0, "d6": 100.0, "last_computed": "2026-05-27 08:25:00" },
         "d1": {
             "data_age_index": { "score": 80.0, "label": "Data Age Index", "details": { "age": 300, "threshold": 240 } },
             "pipeline_health_monitor": { "score": 64.0, "label": "Pipeline Health", "details": { "failed_runs": 6, "total_runs": 20 } }
@@ -78,11 +78,11 @@ const RAW_JSON = {
             "daily_volume_health": { "score": 72.0, "label": "Daily Volume Health", "details": { "today_inserted_count": 310000, "avg": 240000, "z": 2.1, "status": "OUTLIER" } },
             "monthly_volume_stability": { "score": 64.0, "label": "Monthly Volume Stability", "details": { "outliers": 10 } }
         },
-        "d6": { "revenue_sensitivity": { "score": 91.0 }, "regulatory_severity": { "score": 91.0 }, "operational_criticality": { "score": 91.0 }, "customer_impact": { "score": 91.0 } }
+        "d6": { "revenue_sensitivity": { "score": 100.0 }, "regulatory_severity": { "score": 100.0 }, "operational_criticality": { "score": 100.0 }, "customer_impact": { "score": 100.0 } }
     },
     "FIRMWARE_UPDATES": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "FIRMWARE_UPDATES", "row_count": 120000, "column_count": 15, "bytes": 45000000, "id": 1003 },
-        "scores": { "overall": 54.0, "d1": 60.0, "d2": 70.0, "d3": 50.0, "d4": 40.0, "d5": 65.0, "d6": 39.0, "last_computed": "2026-05-27 08:35:00" },
+        "scores": { "overall": 54.0, "d1": 60.0, "d2": 70.0, "d3": 50.0, "d4": 40.0, "d5": 65.0, "d6": 50.0, "last_computed": "2026-05-27 08:35:00" },
         "d1": {
             "data_age_index": { "score": 60.0, "label": "Data Age Index", "details": { "age": 1440, "threshold": 720 } },
             "pipeline_health_monitor": { "score": 60.0, "label": "Pipeline Health", "details": { "failed_runs": 2, "total_runs": 10 } }
@@ -98,7 +98,7 @@ const RAW_JSON = {
             "daily_volume_health": { "score": 70.0, "label": "Daily Volume Health", "details": { "today_inserted_count": 1500, "avg": 1400, "z": 0.5, "status": "NORMAL" } },
             "monthly_volume_stability": { "score": 60.0, "label": "Monthly Volume Stability", "details": { "outliers": 4 } }
         },
-        "d6": { "revenue_sensitivity": { "score": 39.0 }, "regulatory_severity": { "score": 39.0 }, "operational_criticality": { "score": 39.0 }, "customer_impact": { "score": 39.0 } }
+        "d6": { "revenue_sensitivity": { "score": 50.0 }, "regulatory_severity": { "score": 50.0 }, "operational_criticality": { "score": 50.0 }, "customer_impact": { "score": 50.0 } }
     },
     "DEVICE_MODELS": {
         "meta": { "db": "TEST_QUALITY_DB", "schema": "IOT_TELEMETRY", "table": "DEVICE_MODELS", "row_count": 5000000, "column_count": 10, "bytes": 600000000, "id": 1004 },

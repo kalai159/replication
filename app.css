@@ -277,11 +277,7 @@ input:checked + .slider:before { transform: translateX(16px); }
 }
 .custom-exit-btn {
     background: transparent !important;
-    border: none !important;
     color: white !important;
-    font-size: 0.95rem !important;
-    cursor: pointer !important;
-    padding: 8px !important;
     margin-right: auto !important; /* Pushes it to the far left */
 }
 .custom-exit-btn:hover {
@@ -289,9 +285,17 @@ input:checked + .slider:before { transform: translateX(16px); }
     color: rgba(255, 255, 255, 0.75) !important;
     font-weight: 700 !important;
 }
-.driver-popover-next-btn, .driver-popover-prev-btn {
-    padding: 8px 18px !important;
-    border-radius: 20px !important;
+.custom-exit-btn, .driver-popover-next-btn, .driver-popover-prev-btn {
+    height: 40px !important;
+    border-radius: 10px !important;
+    gap: 5px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    padding: 10px 15px !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     font-size: 0.95rem !important;
     cursor: pointer !important;
     font-weight: 600 !important;
@@ -300,7 +304,7 @@ input:checked + .slider:before { transform: translateX(16px); }
 }
 .driver-popover-prev-btn {
     background: transparent !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
     color: white !important;
     margin-right: 12px !important;
 }
@@ -309,7 +313,7 @@ input:checked + .slider:before { transform: translateX(16px); }
 }
 .driver-popover-next-btn {
     background: white !important;
-    border: none !important;
+    border-color: transparent !important;
     color: var(--primary) !important;
 }
 .driver-popover-next-btn:hover {
