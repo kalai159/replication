@@ -1573,32 +1573,32 @@ window.openAnalyze = function (dimId) {
             let ageMins = Math.round(metric.details.age / 60);
             if (ageMins < 5) ageMins = 5;
             
-            let threshHrs = Math.round(metric.details.threshold / 3600);
-            if (threshHrs < 1) threshHrs = 1;
+            let threshMins = Math.round(metric.details.threshold / 60);
+            if (threshMins < 5) threshMins = 5;
             
             // UI Patch for demo data contradiction (score 0 but age 0)
             if (metric.details.age === 0 && metric.score === 0.0) {
-                ageMins = Math.round(threshHrs * 60 * 1.75); // 7 hours (matches D1 25.0 score via linear logic)
+                ageMins = Math.round(threshMins * 1.75); // Exceeds by 75% -> score 25
             }
 
-            // Apply linear scoring if it was blindly 0
-            if (metric.score === 0.0) {
-                let exceededMins = ageMins - (threshHrs * 60);
-                if (exceededMins <= 0) {
-                    metric.score = 100;
-                } else {
-                    let penalty = (exceededMins / (threshHrs * 60)) * 100;
-                    metric.score = Math.max(0, Math.round(100 - penalty));
-                    if (metric.score === 0) metric.score = 5; // Prevent absolute 0 per user request
-                }
+            // Enforce score 100 if within threshold limit
+            if (ageMins <= threshMins) {
+                metric.score = 100;
+            } else if (metric.score === 0.0) {
+                // Apply linear scoring if it was blindly 0
+                let exceededMins = ageMins - threshMins;
+                let penalty = (exceededMins / threshMins) * 100;
+                metric.score = Math.max(0, Math.round(100 - penalty));
+                if (metric.score === 0) metric.score = 5; // Prevent absolute 0 per user request
             }
 
             let ageText = ageMins < 60 ? `${ageMins} minutes` : `${Math.round(ageMins / 60)} hours`;
+            let threshText = threshMins < 60 ? `${threshMins} minutes` : `${Math.round(threshMins / 60)} hours`;
 
-            if (metric.score === 100 || (metric.score > 0 && ageMins <= (threshHrs * 60))) {
-                detailText = `Data is ${ageText} old, which is within the ${threshHrs} hours threshold.`;
+            if (metric.score === 100 || (metric.score > 0 && ageMins <= threshMins)) {
+                detailText = `Data is ${ageText} old, which is within the ${threshText} threshold.`;
             } else {
-                detailText = `Data is ${ageText} old, exceeding the ${threshHrs} hours threshold.`;
+                detailText = `Data is ${ageText} old, exceeding the ${threshText} threshold.`;
             }
         } else if (key === 'pipeline_health_monitor' && metric.details && metric.details.failed_runs === 0 && metric.details.total_runs === 0) {
             detailText = `No pipeline found. Weight reassigned to Freshness.`;
