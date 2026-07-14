@@ -280,7 +280,7 @@ function navigate(page, context = {}) {
         navActions.innerHTML = `
             <button class="secondary" id="recompute-all-btn"><i data-lucide="refresh-cw" style="width:16px;"></i> Recompute All</button>
             <button class="icon-primary" id="nav-settings-btn"><i data-lucide="settings" style="width:18px;"></i></button>
-            <button class="secondary" onclick="window.location.href='mailto:support@example.com'"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
+            <button class="secondary"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
             <button class="secondary" onclick="startWalkthrough()"><i data-lucide="play-circle" style="width:16px;"></i> Walkthrough</button>
         `;
         // Hook up settings button
@@ -302,7 +302,7 @@ function navigate(page, context = {}) {
                 </div>
             </div>
             <button class="icon-primary" id="nav-settings-btn"><i data-lucide="settings" style="width:18px;"></i></button>
-            <button class="secondary" onclick="window.location.href='mailto:support@example.com'"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
+            <button class="secondary"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
             <button class="secondary" onclick="startWalkthrough()"><i data-lucide="play-circle" style="width:16px;"></i> Walkthrough</button>
         `;
         setTimeout(() => {
@@ -320,7 +320,7 @@ function navigate(page, context = {}) {
         }
         backBtn.classList.remove('hidden');
         navActions.innerHTML = `
-            <button class="secondary" onclick="window.location.href='mailto:support@example.com'"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
+            <button class="secondary"><i data-lucide="help-circle" style="width:16px;"></i> Support</button>
             <button class="secondary" onclick="startWalkthrough()"><i data-lucide="play-circle" style="width:16px;"></i> Walkthrough</button>
         `;
         renderSettings(routerView);
