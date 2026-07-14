@@ -1,6 +1,6 @@
 const tourSteps = [
     // Page 1: Dataset Catalog
-    { element: '.page-subtitle', popover: { title: 'Dataset Catalog', description: "Welcome to the Dataset Catalog! This page gives you a bird's-eye view of all your monitored datasets and their AI-readiness.", side: 'bottom', align: 'start' }, disableOverlay: true },
+    { popover: { title: 'Dataset Catalog', description: "Welcome to the Dataset Catalog! This page gives you a bird's-eye view of all your monitored datasets and their AI-readiness.", popoverClass: 'bottom-intro-popover' }, disableOverlay: true },
     { element: '#catalog-status-ribbon', popover: { title: 'Metric Cards', description: "Here you can see a high-level overview of all your monitored datasets, categorized by their current AI-readiness status." }, disableOverlay: true },
     { element: '#dataset-card-0', popover: { title: 'Dataset Cards and Details', description: "Each card represents a table. Here you can quickly review its size, row count, and exactly when its quality score was 'Last computed'." }, disableOverlay: true },
     { element: '#catalog-filters', popover: { title: 'Search and Filter', description: "Use these tools to search for specific datasets or filter your view based on their current status or score." }, disableOverlay: true },
@@ -8,7 +8,7 @@ const tourSteps = [
     { element: '#dataset-analyze-btn-0', popover: { title: 'Analyze Dataset', description: "Click 'Analyze' on any dataset card to navigate directly to its detailed overview and dashboard." }, disableOverlay: false },
     
     // Page 2: Detailed Dashboard
-    { element: '.page-subtitle', popover: { title: 'Dataset Overview', description: "Let's take a closer look. This dashboard breaks down a single table's metrics, revealing the exact data behind its AI Trust Score.", side: 'bottom', align: 'start' }, disableOverlay: true },
+    { popover: { title: 'Dataset Overview', description: "Let's take a closer look. This dashboard breaks down a single table's metrics, revealing the exact data behind its AI Trust Score.", popoverClass: 'bottom-intro-popover' }, disableOverlay: true },
     { element: '#overview-trust-score', popover: { title: 'AI Trust Score', description: "This is the overall AI Trust Score for the selected table. It gives you an immediate indication of how safe and reliable this data is for AI models." }, disableOverlay: true },
     { element: '#overview-dimensions-grid', popover: { title: 'Dimensions', description: "The overall score is calculated from these six key dimensions, including Freshness, Completeness, Schema Clarity, Security, Statistical Health and Business Impact." }, disableOverlay: true },
     { element: '#analyze-btn-d1', popover: { title: 'Analyse', description: "Click 'Analyze' on any dimension to dive deeper into the specific metrics and understand the underlying data issues." }, disableOverlay: false },
@@ -23,7 +23,7 @@ const tourSteps = [
     { element: '#nav-settings-btn', popover: { title: 'Platform Settings', description: "Clicking the gear icon brings you to the global configuration panel where you can manage exactly what and how the monitor operates." }, disableOverlay: false },
     
     // Page 4: Settings - Dataset Config
-    { element: '.page-subtitle', popover: { title: 'Platform Settings', description: "Moving to the control center, the Settings tab lets you customize on top of our rule engine. You can also deploy schedulers and alert systems to keep you constantly updated.", side: 'bottom', align: 'start' }, disableOverlay: true },
+    { popover: { title: 'Platform Settings', description: "Moving to the control center, the Settings tab lets you customize on top of our rule engine. You can also deploy schedulers and alert systems to keep you constantly updated.", popoverClass: 'bottom-intro-popover' }, disableOverlay: true },
     { element: '#settings-configured-datasets', popover: { title: 'Configured Datasets', description: "This table is where you manage the master list of databases and tables the application is actively monitoring." }, disableOverlay: true },
     { element: '#dataset-edit-container', popover: { title: 'Edit Configuration', description: "Here you can easily add or remove specific databases, schemas, and tables from your monitoring list." }, disableOverlay: true },
     

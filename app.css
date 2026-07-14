@@ -333,3 +333,12 @@ input:checked + .slider:before { transform: translateX(16px); }
 .driver-popover-arrow-side-right { border-width: 12px 20px 12px 0 !important; border-right-color: var(--primary) !important; }
 .driver-popover-arrow-side-top { border-width: 20px 12px 0 12px !important; border-top-color: var(--primary) !important; }
 .driver-popover-arrow-side-bottom { border-width: 0 12px 20px 12px !important; border-bottom-color: var(--primary) !important; }
+
+/* Bottom-fixed intro popovers */
+.bottom-intro-popover {
+    top: auto !important;
+    bottom: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+}
