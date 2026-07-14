@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Quality Monitor for AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="demo-banner" class="demo-banner">
+            <div class="demo-pill">DEMO MODE — pre-computed results for SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS</div>
+            <button id="exit-demo-btn" class="icon-btn"><i data-lucide="x"></i> Exit Demo</button>
+        </div>
+
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="app-title">Data Quality Monitor for AI</div>
+                <div class="page-subtitle" id="page-subtitle">Dataset Catalog</div>
+            </div>
+            <div class="nav-right" id="nav-actions">
+            </div>
+        </nav>
+        <div class="nav-divider"></div>
+
+        <main id="router-view" class="main-content">
+        </main>
+
+        <!-- Floating Back Button -->
+        <button id="floating-back-btn" class="floating-back hidden"><i data-lucide="arrow-left"></i> Back to Catalog</button>
+    </div>
+
+    <div id="modal-backdrop" class="modal-backdrop hidden"></div>
+    <div id="modal-container" class="modal-container hidden">
+        <div id="modal-content"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="tour.js"></script>
+</body>
+</html>
