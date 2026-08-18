@@ -537,7 +537,7 @@ function renderOverview(container) {
         
         <div class="overview-grid">
             <div class="card gauge-card" id="overview-trust-score">
-                <div class="subheader">AI TRUST SCORE</div>
+                <div class="subheader">AI Data Readiness</div>
                 <div class="gauge-svg-wrapper">
                     ${getGaugeSVG(table.score, COLORS[table.band])}
                 </div>
